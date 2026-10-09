@@ -14,6 +14,12 @@ export const profile = {
     'A central theme across her work is the move from understanding a problem to designing a practical solution — from primary research with cancer patients, to the Sahara Kit, to awareness workshops, screening initiatives, HPV education and a machine-learning breast-cancer classifier.',
 }
 
+export const narrative = [
+  'Understanding cancer through research.',
+  'Translating evidence into accessible interventions.',
+  'Taking those interventions into communities.',
+]
+
 export const arc = [
   { step: 'Research', text: 'Primary research with 77 Indian cancer patients.' },
   { step: 'Understand', text: 'Distress, disclosure, coping and barriers to care.' },
@@ -126,7 +132,7 @@ export const ics = {
   org: 'Indian Cancer Society',
   groups: [
     {
-      title: 'Public health communication',
+      title: 'Social Media & Public Health Communication',
       items: [
         'Created a series of HPV and breast-cancer educational comics for ICS social media.',
         'Developed cancer myth-busting content.',
@@ -135,7 +141,7 @@ export const ics = {
       ],
     },
     {
-      title: 'Data & operations',
+      title: 'Data & Operations',
       items: ['Supported data clean-up and organisation of information.'],
     },
   ],
@@ -202,37 +208,63 @@ export const arts = [
     title: 'Hindustani Classical Music',
     org: 'Prayag Sangeet Samiti, Allahabad',
     headline: 'Senior Diploma',
-    detail: '6 years of graded vocal training in raags, taals, aalap improvisation and musical theory.',
+    points: [
+      'Completed 6 years of graded Hindustani classical vocal training.',
+      'Training includes raags, taals, aalap improvisation and musical theory.',
+    ],
   },
   {
     title: 'Western Percussion',
     org: 'Rockschool',
-    headline: 'Grade 4 Drums, Distinction',
-    detail: 'Preparing for Grade 5. Performed solos at 2 recitals.',
-  },
-  {
-    title: 'Senior Hindi Editor',
-    org: 'School Editorial Board',
-    headline: '4 years, multiple roles',
-    detail:
-      'Edits student submissions, manages and mentors Grade 6–10 editors, coordinates across departments, and writes for the magazine Uncensored and the school IB newsletter.',
-  },
-  {
-    title: 'Volunteer Teacher',
-    org: 'Bachpan Shaala',
-    headline: '20–25 students per session',
-    detail:
-      'Teaches mathematics, English and problem-solving to underprivileged students aged 6–15, adapting methods to each age group and level.',
+    headline: 'Grade 4 Drums with Distinction',
+    points: ['Currently preparing for Grade 5.', 'Performed solos at 2 recitals.'],
   },
 ]
 
+export const leadership = {
+  title: 'Senior Hindi Editor',
+  org: 'School Editorial Board',
+  summary: 'Sasha progressed through multiple editorial roles over four years.',
+  points: [
+    'Editing and reviewing student submissions',
+    'Managing younger editors',
+    'Mentoring Grade 6–10 students',
+    'Coordinating with other editorial departments',
+    'Contributing to the school magazine Uncensored',
+    'Writing for the school IB newsletter',
+  ],
+}
+
+export const community = {
+  title: 'Bachpan Shaala',
+  role: 'Volunteer Teacher',
+  summary:
+    'Sasha teaches 20–25 underprivileged students per session, working with students aged 6–15, and adapts her teaching methods to different age groups and learning levels.',
+  stats: [
+    { value: '20–25', label: 'students per session' },
+    { value: '6–15', label: 'age range' },
+  ],
+  subjects: ['Mathematics', 'English', 'Problem-solving'],
+}
+
+export const media = [
+  { type: 'Conference', title: 'Oxford Global Psychology Conference', detail: 'Presented: Psychosocial Experience of Cancer Diagnosis in India' },
+  { type: 'Award', title: 'CREST Gold Award', detail: 'Cancer-coping research submitted for the CREST Gold award' },
+  { type: 'Conference', title: 'Eurasia Business and Economics Society Conference', detail: 'Presented: Gender & Investment Risk Appetite' },
+  { type: 'Publication', title: 'Oxford Journal of Student Scholarship', detail: 'Published: Gender & Investment Risk Appetite' },
+  { type: 'Press', title: 'Samvada — RWA newsletter, Sushant Lok-1 A&B Blocks', detail: 'Featured: Suraksha in Pink' },
+  { type: 'Press', title: 'Samvada newsletter', detail: 'Featured: a Pangea Society article' },
+  { type: 'Collaboration', title: 'Indian Cancer Society', detail: '2 Suraksha in Pink workshops and the Sahara Kit at Prashanti' },
+  { type: 'Academic', title: 'University of Chicago', detail: 'Top-quartile performance in PSYC 20300' },
+]
+
 export const gallery = [
-  { title: 'Suraksha in Pink', caption: 'Workshops · community sessions · screening campaign', src: '/images/gallery-suraksha.jpg' },
-  { title: 'Indian Cancer Society', caption: 'Internship · HPV & breast-cancer comics', src: '/images/gallery-ics.jpg' },
-  { title: 'Sahara Kit', caption: 'Kit design · components · Prashanti distribution', src: '/images/gallery-sahara.jpg' },
-  { title: 'Research', caption: 'Presentation · conference · documentation', src: '/images/gallery-research.jpg' },
-  { title: 'HPV Awareness', caption: 'KIITJEE School · Yuva Unstoppable', src: '/images/gallery-hpv.jpg' },
-  { title: 'Academic & Extracurricular', caption: 'UChicago · music · editorial board', src: '/images/gallery-academic.jpg' },
+  { title: 'Suraksha in Pink', items: ['Awareness workshops', 'Community sessions', 'Screening campaign', 'Crowdfunding initiative'], slug: 'suraksha' },
+  { title: 'Indian Cancer Society', items: ['Internship', 'Social-media content', 'HPV / breast-cancer comics', 'Campaign material'], slug: 'ics' },
+  { title: 'Sahara Kit', items: ['Kit design', 'Individual components', 'Packaging', 'Prashanti distribution', 'Patient-support environment'], slug: 'sahara' },
+  { title: 'Research', items: ['Research presentation', 'Conference', 'Research documentation'], slug: 'research' },
+  { title: 'HPV Awareness', items: ['KIITJEE School', 'Yuva Unstoppable', 'Awareness presentation'], slug: 'hpv' },
+  { title: 'Academic & Extracurricular', items: ['University of Chicago', 'Music performances', 'School editorial board', 'Other academic achievements'], slug: 'academic' },
 ]
 
 export const contact = {
