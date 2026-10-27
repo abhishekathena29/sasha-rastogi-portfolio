@@ -10,6 +10,7 @@ import {
   cancerStudy,
   community,
   contact,
+  featuredPress,
   financeStudy,
   gallery,
   hpv,
@@ -643,6 +644,31 @@ export function MediaPage() {
     <>
       <PageHeader kicker="Media & Recognition" title="Media & Recognition" subtitle="Awards, press features, publications, conferences and collaborations." />
       <section className="section section--flush container">
+        <article className="press reveal">
+          <div className="press__masthead">
+            <span className="press__outlet">{featuredPress.outlet}</span>
+            <span>{featuredPress.section}</span>
+            <span>
+              {featuredPress.date} · {featuredPress.pages}
+            </span>
+          </div>
+          <div className="press__body">
+            <div>
+              <span className="press__kicker">{featuredPress.kicker}</span>
+              <h2 className="press__title">{featuredPress.title}</h2>
+              <p className="press__standfirst">{featuredPress.standfirst}</p>
+              <p className="muted">By {featuredPress.author}</p>
+              {featuredPress.link && <ExtLink href={featuredPress.link}>Read the article</ExtLink>}
+            </div>
+            <div>
+              <p className="mini-label">The feature covers</p>
+              <List items={featuredPress.covers} />
+            </div>
+          </div>
+          <blockquote className="press__quote">“{featuredPress.quote}”</blockquote>
+        </article>
+      </section>
+      <section className="section container">
         <SectionTitle label="Honours">Awards & Honours</SectionTitle>
         <Awards items={awards} />
       </section>

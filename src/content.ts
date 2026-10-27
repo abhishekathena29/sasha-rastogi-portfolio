@@ -154,7 +154,7 @@ export const suraksha = {
   screeningAgreement:
     'Under a screening agreement with the Indian Cancer Society, 1,200 more screenings have been booked.',
   features: [
-    'Featured in the Hindu Teen Digest.',
+    'Featured in The Hindu — Teen Digest: “Confronting Cancer’s Fear Factor”.',
     'Featured in Samvada, the RWA newsletter of Sushant Lok-1 A&B Blocks.',
   ],
   instagram: 'https://www.instagram.com/suraksha_in_pink',
@@ -283,6 +283,28 @@ export const community = {
   subjects: ['Mathematics', 'English', 'Problem-solving'],
 }
 
+export const featuredPress = {
+  outlet: 'The Hindu',
+  section: 'Teen Digest · Self Care',
+  date: 'October 2026',
+  pages: 'pp. 14–15',
+  author: 'Sweta Gupta',
+  kicker: 'Finding Courage',
+  title: 'Confronting Cancer’s Fear Factor',
+  standfirst:
+    'At 17, Sasha Rastogi has researched the psychological impact of cancer and has run health workshops. Her work asks one question: what makes it easier for people to take the first step?',
+  covers: [
+    'Her research with AIIMS surveying 77 cancer patients on distress, stigma and disclosure',
+    'The Sahara mindfulness kit at the Indian Cancer Society’s Prashanti healing centre',
+    'Suraksha in Pink and its screening camp with the Indian Cancer Society',
+    'HPV awareness sessions and the breast cancer classification app',
+  ],
+  quote:
+    'If even one person feels less afraid to ask a question, get screened, talk about a health concern, or seek psychological support because of something I have done, that is what I would consider the real impact of my work.',
+  // Add a link (or put the PDF in /public and use its path) to show a "Read the article" button.
+  link: '',
+}
+
 export const awards = [
   { title: 'CREST Gold Award', detail: 'British Science Association — research on the Psychosocial Experience of Cancer Diagnosis', level: 'International' },
   { title: 'AP Scholar', detail: 'Scored 5/5 on 3 APs: Computer Science A, Calculus BC and Psychology', level: 'International' },
@@ -292,7 +314,7 @@ export const awards = [
 ]
 
 export const media = [
-  { type: 'Press', title: 'Hindu Teen Digest', detail: 'Featured: Suraksha in Pink' },
+  { type: 'Press', title: 'The Hindu — Teen Digest', detail: 'Featured: “Confronting Cancer’s Fear Factor” · October 2026' },
   { type: 'Publication', title: 'IJHSS', detail: 'Accepted for publication: Psychosocial Experience of Cancer Diagnosis in India' },
   { type: 'Conference', title: 'Oxford Global Psychology Conference', detail: 'Presented: Psychosocial Experience of Cancer Diagnosis in India' },
   { type: 'Publication', title: 'Oxford Journal of Student Scholarship', detail: 'Published: Gender & Investment Risk Appetite' },
