@@ -295,7 +295,10 @@ h3 {
   grid-row: span 2;
 }
 .photo--portrait {
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 5;
+}
+.photo--portrait img {
+  object-position: center 20%;
 }
 .photo--portrait .photo__placeholder {
   align-items: center;
@@ -1250,6 +1253,86 @@ h3 {
   min-height: 60vh;
 }
 
+/* ---------- Awards / timeline ---------- */
+.awards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+.awards li {
+  position: relative;
+  padding: 28px 24px 26px;
+  border: 1.5px solid var(--line);
+  border-top: 4px solid var(--yellow);
+  background: var(--bg);
+}
+.awards li:first-child {
+  border-top-color: var(--orange);
+}
+.awards h3 {
+  font-size: 19px;
+  margin: 10px 0 8px;
+}
+.awards p {
+  font-size: 14px;
+  color: var(--muted);
+}
+.awards__level {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+
+.stat-row--three {
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 48px;
+}
+.stat-row--two {
+  grid-template-columns: repeat(2, 1fr);
+}
+.stat-row--three strong {
+  font-size: clamp(40px, 5vw, 64px);
+  color: var(--orange);
+}
+.screening-note {
+  margin-top: 16px;
+  font-weight: 600;
+  color: var(--navy);
+}
+.suraksha .recognition {
+  margin: 0 0 20px;
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 56px;
+}
+.timeline li {
+  border-top: 3px solid var(--navy);
+  padding-top: 20px;
+}
+.timeline li:last-child {
+  border-top-color: var(--orange);
+}
+.timeline__num {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--orange);
+  letter-spacing: 0.1em;
+}
+.timeline h3 {
+  font-size: 19px;
+  margin: 6px 0 8px;
+}
+.timeline p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
 /* ---------- Reveal ---------- */
 .reveal {
   opacity: 0;
@@ -1432,6 +1515,9 @@ h3 {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
+  .timeline {
+    grid-template-columns: 1fr 1fr;
+  }
   .ring__inner {
     width: 140px;
     height: 140px;
@@ -1464,6 +1550,8 @@ h3 {
   .arts,
   .gallery,
   .explore,
+  .timeline,
+  .stat-row--three,
   .facts,
   .check-list--cols,
   .footer__links,

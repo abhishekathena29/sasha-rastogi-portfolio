@@ -4,6 +4,7 @@ import { Bar, ExtLink, List, PageHeader, Photo, SectionTitle } from './component
 import {
   academics,
   arc,
+  awards,
   articles,
   arts,
   cancerStudy,
@@ -204,6 +205,10 @@ export function ResearchPage() {
                 The study examined
               </p>
               <List items={financeStudy.points} />
+              <p className="mini-label" style={{ marginTop: 28 }}>
+                Key finding
+              </p>
+              <p className="highlight">{financeStudy.finding}</p>
             </div>
             <List items={financeStudy.recognition} className="recognition" />
           </div>
@@ -217,7 +222,7 @@ export function ResearchPage() {
 export function CancerPublicHealthPage() {
   const related = [
     { path: '/suraksha-in-pink', title: 'Suraksha in Pink', text: suraksha.role },
-    { path: '/sahara-kit', title: 'The Sahara Kit', text: 'Designer & Developer' },
+    { path: '/sahara-kit', title: 'The Sahara Kit', text: sahara.role },
     { path: '/hpv-cancer-prevention', title: 'HPV & Cancer Prevention', text: hpv.role },
   ]
   return (
@@ -277,7 +282,11 @@ export function SurakshaPage() {
         kicker="Community Service & Public Health"
         title={<span className="c-pink">Suraksha in Pink</span>}
         subtitle={`${suraksha.role} | Community Cancer Awareness`}
-      />
+      >
+        <p className="tag-line reveal" style={{ marginTop: 20 }}>
+          {suraksha.partners}
+        </p>
+      </PageHeader>
       <section className="section section--flush container">
         <div className="suraksha">
           <div className="reveal">
@@ -291,7 +300,9 @@ export function SurakshaPage() {
               ))}
             </div>
             <p className="highlight">{suraksha.crowdfund}</p>
-            <p className="muted">{suraksha.feature}</p>
+            <p className="screening-note">{suraksha.screeningAgreement}</p>
+            <p className="mini-label">In the press</p>
+            <List items={suraksha.features} className="recognition" />
             <ExtLink href={suraksha.instagram}>Instagram — @suraksha_in_pink</ExtLink>
           </div>
           <div className="reveal">
@@ -341,15 +352,30 @@ export function SaharaPage() {
       </section>
       <section className="section section--tint">
         <div className="container">
-          <SectionTitle label="Prashanti — Indian Cancer Society Healing Centre">Implementation</SectionTitle>
-          <div className="big-number reveal">
-            <strong>{sahara.distributed}</strong>
-            <span>
-              Sahara Kits were distributed at Prashanti,
-              <br />
-              the Indian Cancer Society’s healing centre.
-            </span>
+          <SectionTitle label="From pilot to adoption">Implementation</SectionTitle>
+          <div className="stat-row stat-row--three reveal">
+            <div>
+              <strong>{sahara.distributed}</strong>
+              <span>kits distributed at Prashanti</span>
+            </div>
+            <div>
+              <strong>{sahara.reducedStress}</strong>
+              <span>recipients reported reduced stress</span>
+            </div>
+            <div>
+              <strong>{sahara.shipped}</strong>
+              <span>more kits shipped</span>
+            </div>
           </div>
+          <ol className="timeline">
+            {sahara.implementation.map((step, i) => (
+              <li key={step.title} className="reveal">
+                <span className="timeline__num">{String(i + 1).padStart(2, '0')}</span>
+                <h3>{step.title}</h3>
+                <p>{step.text}</p>
+              </li>
+            ))}
+          </ol>
           <div className="photo-row" style={{ marginTop: 56 }}>
             {sahara.images.map((src, i) => (
               <Photo key={src} src={src} label={`Sahara Kit — photo ${i + 1}`} className="reveal" />
@@ -371,9 +397,15 @@ export function HpvPage() {
           <div className="reveal">
             <p className="lead">Sasha delivered an awareness presentation focused on:</p>
             <List items={hpv.topics} />
-            <div className="big-number" style={{ margin: '32px 0' }}>
-              <strong>{hpv.reach}</strong>
-              <span>students and staff reached by the campaign</span>
+            <div className="stat-row stat-row--two" style={{ margin: '32px 0' }}>
+              <div>
+                <strong>{hpv.reach}</strong>
+                <span>students and staff reached</span>
+              </div>
+              <div>
+                <strong>{hpv.assemblies}</strong>
+                <span>school assemblies delivered</span>
+              </div>
             </div>
             <ExtLink href={hpv.link}>Event photos</ExtLink>
           </div>
@@ -387,6 +419,7 @@ export function HpvPage() {
             <div className="card reveal">
               <h3>Screening Camp</h3>
               <p>{suraksha.crowdfund}</p>
+              <p style={{ marginTop: 12 }}>{suraksha.screeningAgreement}</p>
             </div>
             <div className="card reveal">
               <h3>HPV & Breast-Cancer Comics</h3>
@@ -413,7 +446,7 @@ export function TechPage() {
             <List items={tech.steps} />
             <p className="mini-label">Skills</p>
             <List items={tech.skills} className="chips chips--light" />
-            <ExtLink href={tech.link}>Website</ExtLink>
+            {tech.link && <ExtLink href={tech.link}>Website</ExtLink>}
           </div>
           <div className="rings">
             {tech.metrics.map((m) => (
@@ -523,6 +556,10 @@ export function AcademicPage() {
           </div>
         </div>
       </section>
+      <section className="section container">
+        <SectionTitle label="Awards & Honours">Academic Honours</SectionTitle>
+        <Awards items={awards.filter((a) => a.title !== 'CREST Gold Award')} />
+      </section>
       <section className="section section--tint">
         <div className="container">
           <SectionTitle label="Intended Major">{profile.major}</SectionTitle>
@@ -586,21 +623,42 @@ export function ArtsPage() {
   )
 }
 
+function Awards({ items }: { items: typeof awards }) {
+  return (
+    <ol className="awards">
+      {items.map((a) => (
+        <li key={a.title} className="reveal">
+          <span className="awards__level">{a.level}</span>
+          <h3>{a.title}</h3>
+          <p>{a.detail}</p>
+        </li>
+      ))}
+    </ol>
+  )
+}
+
 /* ---------------- Media & Recognition ---------------- */
 export function MediaPage() {
   return (
     <>
-      <PageHeader kicker="Media & Recognition" title="Media & Recognition" subtitle="Conferences, publications, features and awards." />
+      <PageHeader kicker="Media & Recognition" title="Media & Recognition" subtitle="Awards, press features, publications, conferences and collaborations." />
       <section className="section section--flush container">
-        <ol className="media-list">
-          {media.map((m) => (
-            <li key={m.title + m.detail} className="reveal">
-              <span className="media-list__type">{m.type}</span>
-              <h3>{m.title}</h3>
-              <p>{m.detail}</p>
-            </li>
-          ))}
-        </ol>
+        <SectionTitle label="Honours">Awards & Honours</SectionTitle>
+        <Awards items={awards} />
+      </section>
+      <section className="section section--tint">
+        <div className="container">
+          <SectionTitle label="Press · Publications · Conferences">Media & Recognition</SectionTitle>
+          <ol className="media-list">
+            {media.map((m) => (
+              <li key={m.title + m.detail} className="reveal">
+                <span className="media-list__type">{m.type}</span>
+                <h3>{m.title}</h3>
+                <p>{m.detail}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
       </section>
     </>
   )

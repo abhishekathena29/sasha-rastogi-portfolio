@@ -25,16 +25,16 @@ export const arc = [
   { step: 'Understand', text: 'Distress, disclosure, coping and barriers to care.' },
   { step: 'Design', text: 'The Sahara Kit, comics and myth-busting content.' },
   { step: 'Implement', text: 'Workshops, kit distribution and screening camps.' },
-  { step: 'Impact', text: 'Communities reached, women screened, patients supported.' },
+  { step: 'Impact', text: '320+ women reached, 100+ screened, 4 linked to care.' },
 ]
 
 export const impactStats = [
   { value: '77', label: 'cancer patients in primary research' },
+  { value: '320+', label: 'women reached through cancer workshops' },
+  { value: '100+', label: 'men & women screened for cancer' },
+  { value: '1,000+', label: 'Sahara Kits shipped' },
   { value: '400+', label: 'students & staff reached on HPV' },
-  { value: '₹2,00,000', label: 'crowdfunded for a screening camp' },
   { value: '98%', label: 'CNN accuracy, benign vs malignant' },
-  { value: '14', label: 'Sahara Kits distributed at Prashanti' },
-  { value: '4', label: 'breast-cancer awareness workshops' },
 ]
 
 export const cancerStudy = {
@@ -51,8 +51,13 @@ export const cancerStudy = {
   notes: [
     'Family support, acceptance and prayer/meditation emerged as major coping mechanisms.',
     'Financial barriers, stigma and limited access to psycho-oncology services limited access to professional mental-health support.',
+    'Proposed culturally sensitive psycho-oncology support for Indian patients.',
   ],
-  recognition: ['Presented at the Oxford Global Psychology Conference', 'Submitted for the CREST Gold award'],
+  recognition: [
+    'Received the CREST Gold Award — British Science Association',
+    'Accepted for publication in IJHSS',
+    'Presented at the Oxford Global Psychology Conference',
+  ],
   tags: [
     'Cancer psychology',
     'Coping mechanisms',
@@ -72,6 +77,8 @@ export const financeStudy = {
     'Confidence in financial knowledge',
     'Behavioural differences in investment decision-making',
   ],
+  finding:
+    'Men reported a higher risk appetite (M = 3.21) than women (M = 2.53) — a significant gender association (p = .033).',
   recognition: [
     'Presented at the Eurasia Business and Economics Society Conference',
     'Published in the Oxford Journal of Student Scholarship',
@@ -79,8 +86,8 @@ export const financeStudy = {
 }
 
 export const sahara = {
-  role: 'Designer & Developer — Emotional Support Intervention',
-  partner: 'Prashanti — Indian Cancer Society Healing Centre',
+  role: 'Designer of the Sahara Mindfulness Intervention Kit',
+  partner: 'Prashanti — Indian Cancer Society Healing Centre · Partnered with Yuva Unstoppable',
   summary:
     'An emotional-support toolkit designed to help cancer patients and their families cope with the emotional difficulties of diagnosis and treatment — directly informed by Sasha’s cancer-coping research.',
   components: [
@@ -98,14 +105,36 @@ export const sahara = {
   ],
   insight:
     'Rather than reading the absence of journalling as an absence of emotional need, Sasha designed very simple prompts to make emotional reflection less intimidating — alongside creative activities patients could engage with more easily.',
+  // Kit figures follow the Athena activity list.
   distributed: 14,
+  reducedStress: 9,
+  shipped: '1,000',
+  implementation: [
+    {
+      title: 'Prashanti pilot',
+      text: '14 kits distributed at Prashanti, the Indian Cancer Society’s healing centre; 9 recipients reported reduced stress.',
+    },
+    {
+      title: 'Adopted by the Indian Cancer Society',
+      text: 'The Indian Cancer Society adopted the Sahara Kit as part of its patient-support work.',
+    },
+    {
+      title: 'Scaled with Yuva Unstoppable',
+      text: 'Partnered with the youth NGO Yuva Unstoppable — 1,000 more kits shipped.',
+    },
+    {
+      title: 'Adapting for student anxiety',
+      text: 'The kit is now being adapted to help students manage anxiety.',
+    },
+  ],
   images: ['/images/sahara-1.jpg', '/images/sahara-2.jpg', '/images/sahara-3.jpg'],
 }
 
 export const suraksha = {
   role: 'Founder & Program Lead',
+  partners: 'Partnered with the Indian Cancer Society · In collaboration with Yuva Unstoppable',
   summary:
-    'A student-led cancer-awareness initiative focused on breast-cancer awareness and early detection, taking evidence-based health information directly into community settings.',
+    'A student-led community cancer-awareness platform focused on breast-cancer awareness and early detection — run in partnership with the Indian Cancer Society and in collaboration with Yuva Unstoppable.',
   venues: ['Ivy Apartments', 'Palm Springs', 'Vidya School', 'Vikasa Stitching School'],
   topics: [
     'Early signs and symptoms of breast cancer',
@@ -115,14 +144,19 @@ export const suraksha = {
     'Improving health awareness within communities',
   ],
   stats: [
-    { value: '4', label: 'workshops' },
-    { value: '≤80', label: 'women per session' },
-    { value: '2', label: 'with the Indian Cancer Society' },
-    { value: '50+', label: 'women to be screened' },
+    { value: '320+', label: 'women reached through workshops' },
+    { value: '100+', label: 'men & women screened' },
+    { value: '4', label: 'diagnosed and linked to care' },
+    { value: '1,200', label: 'more screenings booked with ICS' },
   ],
   crowdfund:
-    'Crowdfunded ₹2,00,000 towards a screening camp intended to give 50+ underprivileged women access to screening.',
-  feature: 'Featured in Samvada, the RWA newsletter of Sushant Lok-1 A&B Blocks.',
+    'Crowdfunded ₹2,00,000 to fund cancer screenings for 100+ underprivileged men and women — 4 people diagnosed were linked to care.',
+  screeningAgreement:
+    'Under a screening agreement with the Indian Cancer Society, 1,200 more screenings have been booked.',
+  features: [
+    'Featured in the Hindu Teen Digest.',
+    'Featured in Samvada, the RWA newsletter of Sushant Lok-1 A&B Blocks.',
+  ],
   instagram: 'https://www.instagram.com/suraksha_in_pink',
   images: ['/images/suraksha-1.jpg', '/images/suraksha-2.jpg'],
 }
@@ -137,7 +171,7 @@ export const ics = {
         'Created a series of HPV and breast-cancer educational comics for ICS social media.',
         'Developed cancer myth-busting content.',
         'Translated accurate health information into accessible, engaging formats.',
-        'Extended the reach of awareness information beyond in-person sessions.',
+        'Extended the reach of awareness information beyond in-person sessions — 1.5K+ views.',
       ],
     },
     {
@@ -153,6 +187,7 @@ export const hpv = {
   role: 'Campaign Lead — HPV Awareness',
   partner: 'KIITJEE School × Yuva Unstoppable',
   reach: '400+',
+  assemblies: 3,
   topics: ['HPV vaccination', 'Cervical-cancer prevention', 'HPV awareness', 'Preventive healthcare'],
   link: 'https://drive.google.com/drive/folders/15yuNzeRb_Nrst-9dS0QlcRJ2T_er_pi2?usp=share_link',
   image: '/images/hpv-1.jpg',
@@ -164,21 +199,22 @@ export const tech = {
   summary:
     'Applying machine learning to breast-cancer classification using a publicly available Kaggle breast-biopsy imaging dataset — and turning the model into a tool anyone can use.',
   steps: [
-    'Trained a Convolutional Neural Network (CNN) on breast-biopsy images.',
-    'Built an interactive web application for real-time classification.',
+    'Built a web app that makes a pre-trained Convolutional Neural Network (CNN) publicly accessible.',
+    'Enables real-time classification of breast-biopsy images.',
   ],
   metrics: [
     { value: 98, label: 'Benign / malignant accuracy' },
     { value: 94, label: 'Subtype classification accuracy' },
   ],
   skills: ['Machine Learning', 'CNN', 'Medical Imaging', 'Data Analysis', 'Web Development'],
-  link: 'https://gentle-path-hope.lovable.app/',
+  // Add the live link once the site is ready (the current build only shows placeholders).
+  link: '',
 }
 
 export const articles = {
   outlet: 'Pangea Society',
   focus: 'AI, Psychology & Neuroscience',
-  reach: '100+ Medium readers · one article featured in Samvada',
+  reach: '100+ Medium readers · featured in Samvada, an RWA newsletter distributing 1 lakh copies monthly',
   list: [
     'AI Brain Drain: Are We Outsourcing Our Thoughts?',
     'The Memory Trap',
@@ -247,15 +283,23 @@ export const community = {
   subjects: ['Mathematics', 'English', 'Problem-solving'],
 }
 
+export const awards = [
+  { title: 'CREST Gold Award', detail: 'British Science Association — research on the Psychosocial Experience of Cancer Diagnosis', level: 'International' },
+  { title: 'AP Scholar', detail: 'Scored 5/5 on 3 APs: Computer Science A, Calculus BC and Psychology', level: 'International' },
+  { title: 'Higher Distinction — International Psychology Olympiad', detail: 'Scored 219/300', level: 'International' },
+  { title: 'Very High Commendation — John Locke Essay Competition', detail: 'Psychology category · top 17.5%', level: 'International' },
+  { title: 'Academic Excellence Awards', detail: 'English Literature, Biology, Chemistry, Physics and Business Studies', level: 'School' },
+]
+
 export const media = [
+  { type: 'Press', title: 'Hindu Teen Digest', detail: 'Featured: Suraksha in Pink' },
+  { type: 'Publication', title: 'IJHSS', detail: 'Accepted for publication: Psychosocial Experience of Cancer Diagnosis in India' },
   { type: 'Conference', title: 'Oxford Global Psychology Conference', detail: 'Presented: Psychosocial Experience of Cancer Diagnosis in India' },
-  { type: 'Award', title: 'CREST Gold Award', detail: 'Cancer-coping research submitted for the CREST Gold award' },
-  { type: 'Conference', title: 'Eurasia Business and Economics Society Conference', detail: 'Presented: Gender & Investment Risk Appetite' },
   { type: 'Publication', title: 'Oxford Journal of Student Scholarship', detail: 'Published: Gender & Investment Risk Appetite' },
-  { type: 'Press', title: 'Samvada — RWA newsletter, Sushant Lok-1 A&B Blocks', detail: 'Featured: Suraksha in Pink' },
-  { type: 'Press', title: 'Samvada newsletter', detail: 'Featured: a Pangea Society article' },
-  { type: 'Collaboration', title: 'Indian Cancer Society', detail: '2 Suraksha in Pink workshops and the Sahara Kit at Prashanti' },
-  { type: 'Academic', title: 'University of Chicago', detail: 'Top-quartile performance in PSYC 20300' },
+  { type: 'Conference', title: 'Eurasia Business and Economics Society Conference', detail: 'Presented: Gender & Investment Risk Appetite' },
+  { type: 'Press', title: 'Samvada — RWA newsletter, Sushant Lok-1 A&B Blocks', detail: 'Featured: Suraksha in Pink and a Pangea Society article · 1 lakh copies monthly' },
+  { type: 'Collaboration', title: 'Indian Cancer Society', detail: 'Partner for Suraksha in Pink screenings; adopted the Sahara Kit' },
+  { type: 'Collaboration', title: 'Yuva Unstoppable', detail: 'HPV awareness campaign, Suraksha in Pink and the Sahara Kit' },
 ]
 
 export const gallery = [
@@ -268,10 +312,10 @@ export const gallery = [
 ]
 
 export const contact = {
-  email: '', // add an email address to show a mail link
+  email: 'rastogisasha11@gmail.com',
   links: [
     { label: 'Suraksha in Pink — Instagram', href: suraksha.instagram },
-    { label: 'Breast Cancer Classifier', href: tech.link },
     { label: 'ICS Social Media Work', href: ics.link },
+    ...(tech.link ? [{ label: 'Breast Cancer Classifier', href: tech.link }] : []),
   ],
 }
